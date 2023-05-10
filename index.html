@@ -10,7 +10,7 @@ photos:
 <ul class="gallery">
 
 	{% for photo in page.photos %}
-		<li style="background-image: url('{{ photo.image }}')">
+		<li style="background-image: url('{{ photo.image | resize: "800x800>" }}')">
 			<a title="{{ photo.caption }}" href="{{ photo.image }}" data-id="#{{ photo.caption | slugify }}" data-caption="{{ photo.caption }}"></a>
 		</li>
 	{% endfor %}
