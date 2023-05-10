@@ -4,10 +4,12 @@ title: Home
 
 <ul class="gallery">
 	{% for photo in site.image.index %}
+	123
 		<li style="background-image: url('{{ photo.url}}')">
 			<a title="{{ photo.caption }}" href="{{ photo.url}}" data-id="#{{photo.image}}" data-caption="{{ photo.caption }}"></a>
 		</li>
 	{% endfor %}
+	456
 	<li class="spacer"></li>
 	<li class="spacer"></li>
 	<li class="spacer"></li>
