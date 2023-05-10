@@ -12,7 +12,7 @@ photos:
 <ul class="gallery">
 	{% for photo in page.photos %}
 		<li style="background-image: url('{{ photo.url}}')">
-			<a title="{{ photo.caption }}" href="{{photo.url}}" data-id="#{{ photo.image | slugify }}" data-caption="{{ photo.caption }}"></a>
+			<a title="{{ photo.caption }}" href="{{photo.url}}"  data-caption="{{ photo.caption }}"></a>
 		</li>
 	{% endfor %}
 	<li class="spacer"></li>
