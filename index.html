@@ -3,12 +3,11 @@ title: Home
 photos:
   - url: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw%2Fb44c7298-b829-49f2-9dc3-07e0458acc30%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1686290401&t=f3da249214a347b51214caaad700211d
     caption: 麦兜
-
 ---
 
 <ul class="gallery">
 	{% for photo in page.photos %}
-		<li style="background-image: url('{{ photo.url | resize: "800x800>" }}')"><a title="{{ photo.caption }}" href="{{ photo.url }}" data-id="#{{ photo.caption | slugify }}" data-caption="{{ photo.caption }}"></a></li>
+		<li style="background-image: url('{{ photo.url}}')"><a title="{{ photo.caption }}" href="{{ photo.url}}" data-id="{{ photo.caption }}" data-caption="{{ photo.caption }}"></a></li>
 	{% endfor %}
 	<li class="spacer"></li>
 	<li class="spacer"></li>
