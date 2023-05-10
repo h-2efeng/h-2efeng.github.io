@@ -8,13 +8,13 @@ photos:
 ---
 
 <ul class="gallery">
+
 	{% for photo in page.photos %}
-	123
-		<li style="background-image: url('{{ photo.image}}')">
-			<a title="{{ photo.caption }}" href="{{photo.image}}" data-id="#{{ photo.caption | slugify }}" data-caption="{{ photo.caption }}"></a>
+		<li style="background-image: url('{{ photo.image }}')">
+			<a title="{{ photo.caption }}" href="{{ photo.image }}" data-id="#{{ photo.caption | slugify }}" data-caption="{{ photo.caption }}"></a>
 		</li>
 	{% endfor %}
-	456
+
 	<li class="spacer"></li>
 	<li class="spacer"></li>
 	<li class="spacer"></li>
