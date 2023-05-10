@@ -1,0 +1,46 @@
+---
+title: Home
+photos:
+  - url: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw%2Fb44c7298-b829-49f2-9dc3-07e0458acc30%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1686290401&t=f3da249214a347b51214caaad700211d
+    caption: 麦兜
+---
+
+<ul class="gallery">
+	{% for photo in page.photos %}
+		<li style="background-image: url('{{ photo.url}}')"><a title="{{ photo.caption }}" href="{{ photo.url}}" data-caption="{{ photo.caption }}"></a></li>
+	{% endfor %}
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+	<li class="spacer"></li>
+</ul>
+
+<div class="overlay">
+	<a href="#" class="close">&#10005;</a>
+	<a class="prev">&lsaquo;</a>
+	<a class="next">&rsaquo;</a>
+	<p class="caption"></p>
+	<img>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  if (window.location.host === "app.cloudcannon.com") {
+    $('.gallery').find("a").click(function(e) {
+      e.preventDefault();
+      return false;
+    });
+  } else {
+    var script = document.createElement("script");
+    script.src = "{{ site.baseurl }}/js/lightbox.js";
+    document.body.appendChild(script);
+  }
+</script>
