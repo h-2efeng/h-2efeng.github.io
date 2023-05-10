@@ -9,7 +9,7 @@ photos:
 
 <ul class="gallery">
 	{% for photo in page.photos %}
-		<li style="background-image: url('{{ photo.url}}')"><a title="{{ photo.caption }}" href="{{ photo.url}}" data-caption="{{ photo.caption }}"></a></li>
+		<li style="background-image: url('{{ photo.url}}')"><a title="{{ photo.caption }}" href="{{ photo.url}}" data-id="#{{photo.caption}}" data-caption="{{ photo.caption }}"></a></li>
 	{% endfor %}
 	<li class="spacer"></li>
 	<li class="spacer"></li>
