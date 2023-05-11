@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: Aperture Template
+title: h-2efeng Aperture
 url: "https://cosmic-hippopotamus.cloudvent.net"
 baseurl:
 google_analytics_key:
@@ -10,13 +10,10 @@ google_analytics_key:
 logo: /siteicon.png
 description: Photography portfolio template for Jekyll.
 author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
-social:
-  name: Aperture Template
-  links:
-    - https://github.com/CloudCannon/aperture-jekyll-template
+  name: h-2efeng
+  email: h-2efeng@qq.com
+  twitter: h-2efeng
+
 
 # -----
 # Build
