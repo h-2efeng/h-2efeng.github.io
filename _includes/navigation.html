@@ -2,19 +2,10 @@
 	<a class="editor-link btn" href="cloudcannon:collections/_data/navigation.yml" class="btn"><strong>&#9998;</strong> Edit navigation</a>
 	{% for link in site.data.navigation %}
 	{% assign class = "" %}
+
 		{% if link.link == page.url %}
 			{% assign class = class | append: " active" %}
 		{% endif %}
-		{% if link.link == "#" %}
-			<li><a href="#">关于我</a>
-				<ul>
-					{% for chirdLink in link %}
-					<a href="{% include relative-src.html src=chirdLink.link %}" class="{{ class }}">{{ chirdLink.name }}</a>
-					{% endfor %}
-				</ul>
-			</li>
-		{% else %}
-			<a href="{% include relative-src.html src=link.link %}" class="{{ class }}">{{ link.name }}</a>
-		{% endif %}
+		<a href="{% include relative-src.html src=link.link %}" class="{{ class }}">{{ link.name }}</a>
 	{% endfor %}
 </nav>
